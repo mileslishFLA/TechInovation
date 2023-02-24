@@ -1,6 +1,5 @@
 $repositoriesPathHerlp = "C:\Users\MileSlishkovikj\source\repos\MyLocalBC\TechInovation"
 $appName = "GitActionsTechInovBCApp.app"
-$appNameShort = "GitActionsTechInovBCApp"
 $serverInstance = "BC"
 $containerName = "MyLocalBC"
 $securePassword = ConvertTo-SecureString -String "test" -AsPlainText -Force
