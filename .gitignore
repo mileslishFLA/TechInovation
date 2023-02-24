@@ -1,0 +1,6 @@
+.alpackages
+*.app
+.vscode/launch.json
+*.alcache
+*.json
+*g.xlf
