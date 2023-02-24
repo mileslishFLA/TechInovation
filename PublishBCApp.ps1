@@ -1,5 +1,6 @@
 $repositoriesPathHerlp = "C:\Users\MileSlishkovikj\source\repos\MyLocalBC\TechInovation"
 $appName = "GitActionsTechInovBCApp.app"
+$appNameShort = "GitActionsTechInovBCApp"
 $serverInstance = "BC"
 $containerName = "MyLocalBC"
 $securePassword = ConvertTo-SecureString -String "test" -AsPlainText -Force
@@ -24,7 +25,6 @@ $credential = New-Object System.Management.Automation.PSCredential -argumentList
    UnInstall-NavApp -ServerInstance $serverInstance -Name $appNameShort -Force
   UnPublish-NavApp -ServerInstance $serverInstance -Name $appNameShort 
    }
-   
    }
 
 Compile-AppInNavContainer -appProjectFolder $repositoriesPathHerlp -containerName $containerName -appName $appName -credential $credential
