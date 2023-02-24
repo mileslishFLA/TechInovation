@@ -31,4 +31,4 @@ $credential = New-Object System.Management.Automation.PSCredential -argumentList
 Compile-AppInNavContainer -appProjectFolder $repositoriesPathHerlp -containerName $containerName -appName $appName -credential $credential
 
 $repositoriesPathHerlp = $repositoriesPathHerlp + "\output\"+ $appName
-Publish-NavContainerApp -containerName $containerName -appFile $repositoriesPathHerlp -skipVerification -sync -install
+Publish-NavContainerApp -containerName $containerName -appFile $repositoriesPathHerlp -skipVerification -sync -install -ignoreIfAppExists
