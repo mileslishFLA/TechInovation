@@ -5,8 +5,6 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: self-hosted
     steps:
-      - run: |
-          .\PublishBCApp.ps1 -RunAsAdmin
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - name: Check out repository code
@@ -24,7 +22,10 @@ jobs:
           docker ps
       - name: List ServerInstance
         run: |
-          Invoke-ScriptInNavContainer -containername $containerName -scriptblock {Get-NavServerInstance BC}
+          Invoke-ScriptInNavContainer -containername $containerName -scriptblock {Get-NavServerInstance BC} 
+      - name: Publishing
+        run: |
+          .\PublishBCApp.ps1 -RunAsAdmin    
       - name: run one test
         run: |
               $containerName = "MyLocalBC"
