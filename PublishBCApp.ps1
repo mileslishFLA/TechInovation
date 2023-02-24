@@ -7,6 +7,7 @@ $securePassword = ConvertTo-SecureString -String "test" -AsPlainText -Force
 $credential = New-Object System.Management.Automation.PSCredential -argumentList "test", $securePassword
 
 
+
  Invoke-ScriptInNavContainer -containername $containerName -scriptblock {
         $appNameShort = "GitActionsTechInovBCApp"
         Set-NavServerConfiguration 'BC' -KeyName 'EnableUserConsistencyValidationOnTasks' -KeyValue 'false'
