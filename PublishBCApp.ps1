@@ -25,6 +25,7 @@ $credential = New-Object System.Management.Automation.PSCredential -argumentList
    UnInstall-NavApp -ServerInstance $serverInstance -Name $appNameShort -Force
   UnPublish-NavApp -ServerInstance $serverInstance -Name $appNameShort 
    }
+   
    }
 
 Compile-AppInNavContainer -appProjectFolder $repositoriesPathHerlp -containerName $containerName -appName $appName -credential $credential
